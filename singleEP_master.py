@@ -5,12 +5,9 @@ from datetime import datetime
 doc = DocxTemplate(r"C:\Users\tripp\PycharmProjects\PythonProject\.venv\SingleEP_jinja_template1.docx")
 
 
-primary_signer = input("Enter the Primary Signer: ")
-
-
 # Define the test data context
 context = {
-    "PrimaryNameSigningUse": primary_signer,
+    "PrimaryNameSigningUse": "test signer",
     "PrimaryNameFull": "Johnathan A. Doe",
     "PrimaryNameLast": "Doe",
     "PrimaryGender": "Mr.",
