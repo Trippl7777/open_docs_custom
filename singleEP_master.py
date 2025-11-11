@@ -1,8 +1,11 @@
 from docxtpl import DocxTemplate
 from datetime import datetime
+from test import user, address
+
+
 
 # Load your Jinja2-compatible Word document
-doc = DocxTemplate(r"SingleEP_jinja_template1.docx")
+doc = DocxTemplate(r"C:\Users\tripp\PycharmProjects\PythonProject\.venv\SingleEP_jinja_template1.docx")
 
 
 # Define the test data context
@@ -10,11 +13,7 @@ context = {
     "PrimaryNameSigningUse": "test signer",
     "PrimaryNameFull": "Johnathan A. Doe",
     "PrimaryNameLast": "Doe",
-    "PrimaryGender": {
-            "Mr.",
-            "Mrs.",
-            "They"
-    },
+    "PrimaryGender": "Mr.",
     "EPType": {
         "StandardWillPackage": True,
         "Trust": True,
@@ -30,7 +29,11 @@ context = {
     "OfficeCityandCounty": {
         "SigningCity": "Honolulu"
     },
-    "OfficeAddressCenter": "123 Trust Way, Suite 100, Honolulu, HI",
+    "Offices":
+        {
+        "Maui": "123 Trust Way, Suite 100, Honolulu, HI",
+        "HNL":"test",
+        "BigIsland": "test"},
     "PRTitle": "The Doe Family Trust",
     "TrustStateLaw": "Hawaii",
     "TrustFundLifeInsurance": {
@@ -41,10 +44,7 @@ context = {
         "Contingent": True
     },
     "TrustProtector": True,
-    "PrimaryGST": True,
-    "PrimaryMailingAddressSame": "123 Main Street",
-    "PrimaryMailingAddressStreet1": "123 Main Street",
-
+    "PrimaryGST": True
 }
 
 # Render and save the document

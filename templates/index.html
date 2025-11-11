@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Estate Plan Generator</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>Estate Plan Document Generator</h1>
+    <form method="POST" action="{{ url_for('generate') }}">
+      <div class="section">
+        <h2>Client Information</h2>
+        <label>Signing Use Name <input type="text" name="PrimaryNameSigningUse" required></label>
+        <label>Full Name <input type="text" name="PrimaryNameFull" required></label>
+        <label>Last Name <input type="text" name="PrimaryNameLast" required></label>
+        <label>Gender <input type="text" name="PrimaryGender"></label>
+      </div>
+
+      <div class="section">
+        <h2>Estate Plan Type</h2>
+        <label><input type="checkbox" name="StandardWillPackage"> Standard Will Package</label>
+        <label><input type="checkbox" name="Trust"> Trust</label>
+        <label><input type="checkbox" name="POWill"> Power of Will</label>
+      </div>
+
+      <div class="section">
+        <h2>Trust Details</h2>
+        <label>Trust Name <input type="text" name="TrustName"></label>
+        <label>Signing Date <input type="date" name="SigningDate"></label>
+        <label>State Law <input type="text" name="TrustStateLaw" value="Hawaii"></label>
+      </div>
+
+      <div class="section">
+        <h2>Responsible Attorney</h2>
+        <label>Name <input type="text" name="AttorneyName"></label>
+        <label>Firm Name <input type="text" name="FirmName"></label>
+        <label>Email <input type="email" name="AttorneyEmail"></label>
+      </div>
+
+      <div class="section">
+        <h2>Office Information</h2>
+        <label>Signing City <input type="text" name="SigningCity" value="Honolulu"></label>
+        <label>Maui Office <input type="text" name="OfficeMaui"></label>
+        <label>HNL Office <input type="text" name="OfficeHNL"></label>
+        <label>Big Island Office <input type="text" name="OfficeBigIsland"></label>
+      </div>
+
+      <div class="section">
+        <h2>Additional Options</h2>
+        <label>PR Title <input type="text" name="PRTitle"></label>
+        <label><input type="checkbox" name="RetirementPrimary"> Retirement Primary</label>
+        <label><input type="checkbox" name="RetirementContingent"> Retirement Contingent</label>
+        <label><input type="checkbox" name="TrustProtector"> Trust Protector</label>
+        <label><input type="checkbox" name="PrimaryGST"> Primary GST</label>
+      </div>
+
+      <button type="submit">Generate Document</button>
+    </form>
+  </div>
+</body>
+</html>
