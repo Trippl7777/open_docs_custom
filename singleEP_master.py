@@ -1,3 +1,5 @@
+from msilib.schema import Class
+
 from docxtpl import DocxTemplate
 from datetime import datetime
 
@@ -54,16 +56,30 @@ context = {
     },
     "TrustName": "The Doe Family Trust",
     "TrusteeNameType": {
-        "Grantor",
-        "Settlor",
-        "Trustor"
+        "Grantor": "Grantor",
+        "Settlor": "Settlor",
+        "Trustor": "Trustor",
     },
-    "TrustDate": "January 1, 2025",
+    "TrustDate": datetime.today().strftime("%B %d, %Y"),
     "SigningDate": datetime.today().strftime("%B %d, %Y"),
-    "TrustStateLaw": {
+    "SigningWitness1": "Witness 1",
+    "SigningWitness2": "Witness 2",
+    "SigningWitness1Address": "345 Queen Street",
+    "SigningWitness2Address": "345 Queen Street",
+
+    "ApplicableStateLaw": {
         "Hawaii",
         "California",
     },
+    #This TrustType needs a lot of work...
+    "TrustType": {
+        "Disclaimer",
+        "Clayton",
+        "A-B",
+        "A-B-C",
+        "Skip Spouse",
+    },
+
     "PRTitle": "The Doe Family Trust",
 
     "TrustFundLifeInsurance": {
@@ -85,10 +101,9 @@ context = {
         "No": False,
     },
     "TrustAmendmentNumber": {
-        "One",
-        "Two",
-        "Three",
-        "Four",
+        "One": "One",
+        "Two": "Two",
+        "Three": "Three",
     },
     "PrimaryGiftOfCash": {
         "Yes": True,
@@ -118,15 +133,55 @@ context = {
 
     #Notary Section
     "SigningNotary": {
-        "Isaiah",
-        "David",
-        "Laurie"
+        "Isaiah Cureton": "Isaiah Cureton",
+        "David Bernstein": "David Bernstein",
+        "Laurie Cheu": "Laurie Cheu",
     },
     "SigningNotaryExpiration": {
-        "Isaiah": "Aug. 25, 2028",
-        "David": "Jan. 1, 2028",
-        "Laurie": "Jan 1, 2028"
+        "Isaiah": "Notary Expires: Aug. 25, 2028",
+        "David": "Notary Expires: Jan. 1, 2028",
+        "Laurie": "Notary Expires: Jan 1, 2028"
     },
+    "SigningNotaryState": {
+        "Hawaii": "State of Hawaii",
+        "California": "State of California",
+    },
+    #Important People Section
+    "ImportantPeople": {
+        "ImportantPerson1": "Jon Doe1",
+        "ImportantPerson2": "Jon Doe2",
+        "ImportantPerson3": "Jon Doe3",
+        "ImportantPerson4": "Jon Doe4",
+        "ImportantPerson5": "Jon Doe5",
+        "ImportantPerson6": "Jon Doe6",
+        "ImportantPerson7": "Jon Doe7",
+    },
+    "ImportantPeopleRelationship": {
+        "Me": "Me",
+        "Spouse/Partner": "Spouse/Partner",
+        "JointChild": "Joint Child of me and my Spouse/Partner",
+        "MySeperateChild": "My Seperate Child",
+        "StepOrFosterChild": "My Step/Foster Child",
+        "Grandchild": "Grandchild",
+        "Parent": "Parent",
+        "Grandparent": "Grandparent",
+        "GreatGrandparent": "Great Grandparent",
+        "Sibling": "Sibling",
+        "Cousin": "Cousin",
+        "Aunt": "Aunt",
+        "Uncle": "Uncle",
+        "NeiceOrNephew": "Neice/Nephew",
+        "Oranization": "Oranization",
+        "Other": "?",
+    },
+    "ImportantPeopleLiving?": {
+        "Yes": True,
+        "No": False,
+    },
+
+    #Fee's Section
+    "FeeRetainer": "$0.00",
+    "FeeTotal": "$0.00",
 
 
 
