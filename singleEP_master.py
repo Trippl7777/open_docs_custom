@@ -22,8 +22,10 @@ context = {
     "ResponsibleAttorney": {
         "Name": "Jane Lawyer",
         "Initials": "IAC",
-        "FirmName": "Lawyer & Co.",
-        "Email": "jane.lawyer@lawyerco.com"
+        "FirmName": {
+            "Isaiah": "Hawaii Estate Law and Planning",
+            "David": "Law Office of David A. Bernstein",
+        "AttorneyEmail": "isaiah@isaiahcuretonlaw.com"
     },
     #Address Section
     "OfficeCityandCounty": {
@@ -131,10 +133,9 @@ context = {
         "Three": "Three",
     },
     "PrimaryGiftOfCash": {
-        "Yes": True,
-        "No": False,
+        "Exists": True,
+        "Amount": "$1,000"
     },
-    "PrimaryGiftOfCashDialog": "Text...",
     "PrimaryRightToReside": {
         "Yes": True,
         "No": False,
@@ -200,6 +201,10 @@ context = {
         "Yes": True,
         "No": False,
     },
+    "BusinessPowers": {
+        "Yes": True,
+        "No": False,
+    },
 
     #Special Trust Types
     "PetTrust": {
@@ -234,6 +239,25 @@ context = {
         "exists": True,
         "percent": 95
     },
+    "RealPropertyFirstRightOfRefusal": {
+        "Yes": True,
+        "No": False,
+        #If true, how much? And, if true, select who gets right from list
+    },
+
+    "JointTrust": {
+        "Yes": True,
+        "No": False,
+    },
+    "MarriedSeparateTrust": {
+        "Yes": True,
+        "No": False,
+    },
+    "SpousesCoTrustees": {
+        "Yes": True,
+        "No": False,
+    },
+
 
     #Children Section
     "DeceasedChildren": {
@@ -296,16 +320,165 @@ context = {
         "Yes": True,
         "No": False,
     },
+    "ImportantPeopleDateOfBirth": "1995-08-19",
+    "phoneTypeOptions": {
+        "mobile",
+        "work",
+        "home",
+        "fax",
+        "other"
+    },
+    "ImportantPeoplePhoneNumbers": "(808)225-0570",
+    "ImportantPeopleAge": "30",
+    "ImportantPeopleEmail": "isaiah@isaiahcuretonlaw.com",
+    "TrusteeFormat": {
+        "SingleFileList": {
+            "Yes": True,
+            "No": False,
+        },
+        "FirstTwoFromList": {
+            "Yes": True,
+            "No": False,
+        },
+        "FirstThreeFromList": {
+            "Yes": True,
+            "No": False,
+        },
+        "ListAandB": {
+            "Yes": True,
+            "No": False,
+        },
+        "ListAandBandC": {
+            "Yes": True,
+            "No": False,
+        },
+    },
 
     #Fee's Section
     "FeeRetainer": "$0.00",
     "FeeTotal": "$0.00",
 
+    #Primary Beneficiary Section
+    "BeneficiaryName": "Isaiah Cureton",
+    "BeneficiaryOrganization": {
+        "Yes": True,
+        "No": False
+    },
+    "ContingentBeneficiaryIssue": {
+        "Yes": True,
+        "No": False
+    },
 
 
-}
+
+    #Deed Section
+    "RealEstateType": {
+        "PrincipalResidence": "Principal Residence",
+        "SecondaryResidence": "Secondary Residence",
+        "CommercialRental": "Commercial Rental",
+        "ResidentialRental": "Residential Rental",
+        "Timeshare": "Timeshare",
+        "Leasehold": "Leasehold",
+        "Mineral": "Mineral",
+        "VacantLand": "Vacant Land",
+        "Other": "Other",
+    "FairMarketValue": "Fair Market Value",
+    "PercentOwnership": "100%",
+    "TMK/APN": "1-2-002-002-0000",
+    "LegalDescription": "1 bed 2 bath",
+    "MortgageBalance": "$100,000",
+    "EquityBalance": "$100,000",
+    "PrepareDeed": {
+        "Yes": True,
+        "No": False
+    },
+    "DeedType": {
+        "AffidavitOfSuccessorTrustee",
+        "AffidavitOfSuccessorTrusteeJointSecondToDie",
+        "AffidavitOfSuccessorTrusteeMarriedSeperateFirstToDie",
+        "AffidavitOfSuccessorTrusteeMarriedSeperateSecondtoDie",
+        "AffidavitOfSurvivingTrustee",
+        "AffidavitOfSurvivingJointTenantSpouse",
+        "AffidavitOfSurvivingJointTenantOther",
+        "AffidavitOfDesignatedBeneficiaryUnderTODDeed",
+        "AffidavitOfDesignatedBeneficiaryUnderTODLease",
+        "LandCourtPetition",
+        "LtdWarrantyDeedToTrust",
+        "LtdWarrantyAptDeedToTrust",
+        "LtdWarrantyDeedToTE",
+        "LtdWarrantyAptDeedToTE"
+        "LtdWarrantyDeedToTS",
+        "LtdWarrantyAptDeedToTS",
+        "LtdWarrantyDeedToJT",
+        "LtdWarrantyAptDeedToJT",
+        "LtdWarrantyDeedToTC",
+        "LtdWarrantyAptDeedToTC",
+        "QCDeedToTrust",
+        "QCAptDeedToTrust",
+        "QCDeedToTE",
+        "QCAptDeedToTE",
+        "QCDeedToTS",
+        "QCAptDeedToTS",
+        "QCDeedToJT",
+        "QCAptDeedToJT",
+        "QCDeedToTC",
+        "QCAptDeedToTC",
+        "QCDeedToTC",
+        "QCAptDeedToTC",
+        "TODDToTrust",
+        "TODDToTE",
+        "TODDToTS",
+        "TODDToJT",
+        "TODDToTC",
+    },
+    "GrantorNameStyle": {
+        "GrantorFullName",
+        "GrantorTrusteeName",
+        "GrantorTrustName",
+        "GrantorFullNamePrimaryOnly",
+        "GrantorFullNamePartnerOnly",
+        "GrantorTrusteeNamePrimaryOnly",
+        "GrantorTrusteeNamePartnerOnly",
+        "GrantorDeceasedSpouseTrustName",
+        "GrantorSurvivingSpouseTrustName",
+        "GrantorOther"
+    },
+    "GranteeNameStyle": {
+        "GranteeFullName",
+        "GranteeTrusteeName",
+        "GranteeFullNamePrimaryOnly",
+        "GranteeFullNamePartnerOnly",
+        "GranteeTrusteeNamePrimaryOnly",
+        "GranteeTrusteeNamePartnerOnly",
+        "GranteeDeceasedSpouseTrustName",
+        "GranteeSurvivingSpouseTrustName",
+        "GranteeOther"
+    },
+
+    "RecordingSystem": {
+        "RegularSystem", "Regular System",
+        "LandCourt", "Land Court"
+    },
+    "PriorConveyanceDate": "2025-01-01",
+    "PriorTCT": "1000000",
+    "PriorConveyanceRegularSystemDocumentNumber": "100000",
+    "LandCourtApplicationNumber": "100000",
+
+
+    #POA Section
+    "HybridPOA": {
+        "Yes": True,
+        "No": False
+    },
+    "SpringingPOA": {
+        "Yes": True,
+        "No": False
+    },
+
+
+},
 
 # Render and save the document
-doc.render(context)
-doc.save("SingleEP_rendered_test.docx")
+doc.render(context),
+doc.save("SingleEP_rendered_test.docx"),
 print("Document generated.")
