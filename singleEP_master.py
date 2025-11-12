@@ -37,16 +37,17 @@ context = {
         "Hilo": "123 Trust Way, Suite 100, Hilo, HI",
         "Kona": "123 Trust Way, Suite 100, Kona, HI"
     },
-    "PrimaryMailingAddressSame": "123 Main Street",
-    "PrimaryMailingAddressStreet1": "123 Main Street",
-    "PrimaryMailingAddressStreet2": "123 Main Street",
-    "PrimaryMailingAddressAptNo": "Apt. 10",
-    "PrimaryMailingAddressCity": "Honolulu",
-    "PrimaryMailingAddressState": {
-        "Full": "Hawaii",
-        "Abbreviated": "HI"
+    "PrimaryMailingAddress": {
+        "PrimaryMailingAddressStreet1": "123 Main Street",
+        "PrimaryMailingAddressStreet2": "123 Main Street",
+        "PrimaryMailingAddressAptNo": "Apt. 10",
+        "PrimaryMailingAddressCity": "Honolulu",
+        "PrimaryMailingAddressState": {
+                "PrimaryMailingAddressStateFull": "Hawaii",
+                "PrimaryMailingAddressStateAbbreviated": "HI"
+        },
+        "PrimaryMailingAddressZip": "96813",
     },
-    "PrimaryMailingAddressZip": "96813",
 
     #Trust Details Section
     "EPType": {
@@ -64,24 +65,49 @@ context = {
     "SigningDate": datetime.today().strftime("%B %d, %Y"),
     "SigningWitness1": "Witness 1",
     "SigningWitness2": "Witness 2",
-    "SigningWitness1Address": "345 Queen Street",
-    "SigningWitness2Address": "345 Queen Street",
-
+    "SigningWitness1Address": {
+        "SigningWitness1street1": "123 Main St",
+        "SigningWitness1street2": "123 Main St",
+        "SigningWitness1AptNo": "Apt. 10",
+        "SigningWitness1city": "Honolulu",
+        "SigningWitness1state": "HI",
+        "SigningWitness1zip": "96815"
+    },
+    "SigningWitness2Address": {
+        "SigningWitness2street": "123 Main St",
+        "SigningWitness2street2": "123 Main St",
+        "SigningWitness2AptNo": "Apt. 10",
+        "SigningWitness2city": "Honolulu",
+        "SigningWitness2state": "HI",
+        "SigningWitness2zip": "96815"
+    },
     "ApplicableStateLaw": {
         "Hawaii",
         "California",
     },
-    #This TrustType needs a lot of work...
     "TrustType": {
-        "Disclaimer",
-        "Clayton",
-        "A-B",
-        "A-B-C",
-        "Skip Spouse",
+        "Disclaimer": {
+            "Yes": True,
+            "No": False,
+        },
+        "Clayton": {
+            "Yes": True,
+            "No": False,
+        },
+        "A-B": {
+            "Yes": True,
+            "No": False,
+        },
+        "A-B-C": {
+            "Yes": True,
+            "No": False,
+        },
+        "Skip Spouse": {
+            "Yes": True,
+            "No": False,
+        },
     },
-
     "PRTitle": "The Doe Family Trust",
-
     "TrustFundLifeInsurance": {
         "Primary"
     },
@@ -91,7 +117,6 @@ context = {
     },
     "TrustProtector": True,
     "PrimaryGST": True,
-
     "TrustorIsSoleTrustee": {
         "Yes": True,
         "No": False,
@@ -129,7 +154,99 @@ context = {
         "Yes": True,
         "No": False,
     },
-    "TrustSpecialNeedsDialog": "Text...",
+    "TrustSpecialNeedsDialog": {
+        "Yes": True,
+        "No": False,
+    },
+    "IntentionallyOmitBeneficiary": {
+        "Yes": True,
+        "No": False,
+    },
+    "ContinuingTrust": {
+        "Yes": True,
+        "No": False,
+    },
+    "GST": {
+        "Yes": True,
+        "No": False,
+    },
+    "5and5Power": {
+        "Yes": True,
+        "No": False,
+    },
+    "TrustPrimaryBeneficiaryLifeInsurance": {
+        "Yes": True,
+        "No": False,
+    },
+    "TrustPrimaryBeneficiaryRetirement": {
+        "Yes": True,
+        "No": False,
+    },
+    "TrustContingentBeneficiaryRetirement": {
+        "Yes": True,
+        "No": False,
+    },
+    "RetirementAccumulationTrust": {
+        "Yes": True,
+        "No": False,
+    },
+
+    #Special Trust Terms
+    "DrugAbuseTesting": {
+        "Yes": True,
+        "No": False,
+    },
+    "DivorceProtection": {
+        "Yes": True,
+        "No": False,
+    },
+
+    #Special Trust Types
+    "PetTrust": {
+        "Yes": True,
+        "No": False,
+    },
+    "SpecialNeedsTrust": {
+        "Yes": True,
+        "No": False,
+    },
+    "GunTrust": {
+        "Yes": True,
+        "No": False,
+    },
+    "QDOTrust": {
+        "Yes": True,
+        "No": False,
+    },
+    "TrusteeSellAllRealProperty": {
+        "Yes": True,
+        "No": False,
+    },
+    "TrusteeSellResidenceOnly": {
+        "Yes": True,
+        "No": False,
+    },
+    "RightToReside": {
+        "Yes": True,
+        "No": False,
+    },
+    "RealPropertyMaintanceFund": {
+        "exists": True,
+        "percent": 95
+    },
+
+    #Children Section
+    "DeceasedChildren": {
+        "Yes": True,
+        "No": False,
+    },
+    "NumberOfChildren": {
+        "1": "One",
+        "2": "Two",
+        "3": "Three",
+        "4": "Four",
+        "5": "Five",
+    },
 
     #Notary Section
     "SigningNotary": {
@@ -146,6 +263,7 @@ context = {
         "Hawaii": "State of Hawaii",
         "California": "State of California",
     },
+
     #Important People Section
     "ImportantPeople": {
         "ImportantPerson1": "Jon Doe1",
