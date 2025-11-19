@@ -51,6 +51,151 @@ context = {
         "PrimaryMailingAddressZip": "96813",
     },
 
+    #Additional Details
+        "AdditionalPersonalDetails": {
+            "Yes": True,
+            "No": False,
+        },
+        "PrimaryMilitaryDialog": {
+            "Yes": True,
+            "No": False,
+        },
+        "PrimaryMilitarySERVED": {
+            "Yes": True,
+            "No": False,
+        },
+        "PrimaryMilitaryBranch": {
+            "Navy": "Navy",
+            "Army": "Army",
+            "AirForce": "Air Force",
+            "CoastGuard": "Coast Guard",
+            "Marines": "Marines",
+        },
+        "PrimaryMilitaryID": "11111",
+        "PrimaryMilitaryDateStart": "01/01/2025",
+        "PrimaryMilitaryDateEnd": "01/01/2025",
+        "PrimaryMilitaryDuration": "10 years",
+        "PrimaryMilitaryAdditionalInfo": "Enter Info Here",
+
+        "PrimaryHealthDialog": {
+            "Yes": True,
+            "No": False,
+        },
+        "PrimaryHealthIssuesHAS": {
+            "Yes": True,
+            "No": False,
+        },
+        "PrimaryHealthAdditionalInfo": "Enter Info Here",
+
+        "PrimaryEducationAndIPDialog": {
+            "Yes": True,
+            "No": False,
+        },
+        "PrimaryEducationLevel": {
+            "NoDegree": "No Degree",
+            "HighSchool": "High School",
+            "Associates": "Associates",
+            "Bachelors": "Bachelors",
+            "Graduates": "Graduates",
+            "Masters": "Masters",
+        },
+        "PrimaryEducationProfession": "Enter Degree Type",
+        "PrimaryEducationIPDetails": {
+            "Yes": True,
+            "No": False,
+        },
+        "PrimaryEducationAndIPLawyerRecommended": "Consider talking to a lawyer to legally protect your intellectual property assets from claims by others",
+
+        "PrimarySpiritualConnectionsDialog": {
+            "Yes": True,
+            "No": False,
+        },
+        "PrimarySpiritualPlaceOfWorship": "Enter Location",
+        "PrimarySpiritualBeliefs": "Enter Beliefs",
+        "PrimarySpiritualAdditionalInfo": "Enter Additional Info",
+
+    #Advisor
+        "AdvisorsHAVE?": {
+            "Yes": True,
+            "No": False,
+        },
+        "AdvisorsCount": "Number of Advisors",
+        "AdvisorNameFull": "John Doe",
+        "AdvisorType": {
+            "Attorney": "Attorney",
+            "AccountantTaxPreparer": "Accountant/Tax Preparer",
+            "BusinessPartner": "Business Partner",
+            "Employer": "Employer",
+            "FinancialAdvisor": "Financial Advisor",
+            "FuneralDirector": "Funeral Director",
+            "InsuranceAgent": "Insurance Agent",
+            "Landlord": "Landlord",
+            "Physician": "Physician",
+            "Realtor": "Realtor",
+            "ReligiousAdvisor": "Religious Advisor",
+            "Stockbroker": "Stockbroker",
+            "Other": "Other",
+        },
+        "AdvisorTypeOther": "Enter Advisor Type",
+        "AdvisorCompany": "Enter Advisor Company",
+        "AdvisorCompanyBranch": "Enter Advisor Company Branch",
+        "AdvisorCompanyURL": "Enter Advisor Company URL",
+        "AdvisorGender": {
+            "Male": "Male",
+            "Female": "Female",
+        },
+        "AdvisorEmail": "Enter Advisor Email",
+        "AdvisorPhone": "Enter Advisor Phone",
+        "AdvisorPhoneType": {
+            "Cell": "Cell Phone",
+            "Office": "Office Phone",
+        },
+        "AdvisorAddressStreet1": "Enter Advisor Street 1",
+        "AdvisorAddressStreet2": "Enter Advisor Street 2",
+        "AdvisorAddressAptNo": "Enter Advisor Apt No",
+        "AdvisorAddressCity": "Enter Advisor City",
+        "AdvisorAddressState": "Enter Advisor State",
+        "AdvisorAddressZip": "Enter Advisor Zip",
+        "AdvisorDesignations": "Not Sure What This Is",
+        "AdvisorDesignationsOther": "Not Sure What This Is",
+        "AdvisorAdditionalInfo": "Enter Additional Info",
+
+    #Bank Info Section
+         "BankDialogIntro": {
+            "Yes": True,
+            "No": False,
+        },
+        "BankAcctsYES": {
+            "Yes": True,
+            "No": False,
+        },
+        "BankBalanceEstimatedTotal": "$99,999,999",
+        "BankAcctsCount": "Enter Number of Accts",
+        "BankBalanceTotal": "Automatically Calculated Balance",
+        "BankAcctType": {
+            "Checking": "Checking",
+            "Savings": "Savings",
+        },
+        "BankAcctTypeOther": "Enter Bank Type",
+        "BankAcctNo": "Enter Bank No",
+        "BankBank": "Enter Bank Name",
+        "BankBranch": "Enter Bank Branch",
+        "BankDescription": "Enter Bank Description",
+        "BankAgent": "Enter Bank Agent",
+        "BankAgentEmail": "Enter Bank Agent Email",
+        "BankAgentPhone": "Enter Bank Agent Phone",
+        "BankBalance": "$99,999,999",
+        "BankAcctMannerOwned": {
+            "Individual": "Individual",
+            "Joint": "Joint",
+        },
+        "BankAcctMannerOwnedOther": "Enter Manner Owned",
+        "BankAcctBenePrimary": "choose bene name from list of important people",
+        "BankAcctBeneCont": "not sure what this is",
+        "BankOtherBeneTypeOther": "not sure what this is",
+        "BankBeneSN": "enter beneficiary ssn",
+        "BankAcctAdditionalInfo": "Enter Additional Info",
+
     #Trust Details Section
     "EPType": {
         "StandardWillPackage": True,
